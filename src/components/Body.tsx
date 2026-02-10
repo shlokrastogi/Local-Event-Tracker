@@ -1,4 +1,4 @@
-import "./index.css";
+import "../index.css";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Browse from "./Browse.tsx";
 import Login from "./Login.tsx";
