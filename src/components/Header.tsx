@@ -50,7 +50,7 @@ const Header = () => {
           </ul>
         </div>
         <div className="ml-4 ">
-          <CreateEventButton />
+          <CreateEventButton onClick={() => navigate("/login")} />
         </div>
       </div>
     </div>

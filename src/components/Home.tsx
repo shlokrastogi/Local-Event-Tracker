@@ -5,8 +5,10 @@ import { SearchButton } from "../utils/button";
 import { HostEventButton } from "../utils/button";
 import { ExploreEventsButton } from "../utils/button";
 import ExplorePopularCategories from "./ExplorePopularCategories";
+import { useNavigate } from "react-router-dom";
 
 const Home = () => {
+  const navigate = useNavigate();
   const [coords, setCoords] = useState<{ lat: number; lon: number } | null>(
     null,
   );
@@ -54,9 +56,7 @@ const Home = () => {
             <ExploreEventsButton
               onClick={() => console.log("explore button is clicked")}
             />
-            <HostEventButton
-              onClick={() => console.log("host button is clicked")}
-            />
+            <HostEventButton onClick={() => navigate("/login")} />
           </div>
         </div>
       </div>
