@@ -1,1 +1,16 @@
 @import "tailwindcss";
+
+@theme {
+  /* Define the custom animation variable */
+  --animate-infinite-scroll: scroll 30s linear infinite;
+
+  /* Define the keyframes */
+  @keyframes scroll {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-200%);
+    }
+  }
+}

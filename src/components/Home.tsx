@@ -11,7 +11,7 @@ const Home = () => {
     null,
   );
   const [locationName, setLocationName] = useState("");
-  const [events, setEvents] = useState([]);
+  // const [events, setEvents] = useState([]);
 
   return (
     <div>
@@ -44,6 +44,12 @@ const Home = () => {
 
             <SearchButton onClick={() => console.log(coords)} />
           </div>
+          <p className="text-sm opacity-60">
+            Location:{" "}
+            {locationName
+              ? locationName
+              : "Your location will be displayed here"}
+          </p>
           <div className="flex justify-start gap-4">
             <ExploreEventsButton
               onClick={() => console.log("explore button is clicked")}

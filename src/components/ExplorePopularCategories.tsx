@@ -1,3 +1,4 @@
+import { ViewAllButton } from "../utils/button";
 import {
   PopularCardCategory1,
   PopularCardCategory2,
@@ -11,19 +12,35 @@ import {
 
 const ExplorePopularCategories = () => {
   return (
-    <div className="py-4 px-2">
-      <h2 className="text-black text-2xl text-center mb-2 font-semibold">
-        Explore Popular Categories Events
-      </h2>
-      <div className="w-full flex flex-row gap-4 flex-wrap p-2 overflow-hidden">
-        <PopularCardCategory1 />
-        <PopularCardCategory2 />
-        <PopularCardCategory3 />
-        <PopularCardCategory4 />
-        <PopularCardCategory5 />
-        <PopularCardCategory6 />
-        <PopularCardCategory7 />
-        <PopularCardCategory8 />
+    <div className="py-6 px-4 overflow-hidden bg-gray-200">
+      <div className="flex flex-row items-center justify-between mb-6">
+        <h2 className="text-black flex-1 text-3xl text-center mb-4">
+          Explore Popular Categories Events
+        </h2>
+        <ViewAllButton />
+      </div>
+
+      <div className="relative w-full animate-infinite-scroll  hover:[animation-play-state:paused]">
+        <div className="flex gap-4 w-full ">
+          {/* set 1 */}
+          <PopularCardCategory1 />
+          <PopularCardCategory2 />
+          <PopularCardCategory3 />
+          <PopularCardCategory4 />
+          <PopularCardCategory5 />
+          <PopularCardCategory6 />
+          <PopularCardCategory7 />
+          <PopularCardCategory8 />
+          {/* set 2 * for infinite loop*/}
+          <PopularCardCategory1 />
+          <PopularCardCategory2 />
+          <PopularCardCategory3 />
+          <PopularCardCategory4 />
+          <PopularCardCategory5 />
+          <PopularCardCategory6 />
+          <PopularCardCategory7 />
+          <PopularCardCategory8 />
+        </div>
       </div>
     </div>
   );
